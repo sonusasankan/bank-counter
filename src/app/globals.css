@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #003c72;
+  --secondary-color: #e3eeff;
+  --btn-primary: #6fb2ed;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.btn--primary{
+  background-color: var(--btn-primary);
+  color: #00305b;
+}
+
+.border-blue-light{
+  border-color: #b7cbdd;
+}
+
+.text-higlight-blue{
+  color: var(--primary-color);
+}
+.input-border-color{
+  border-color: rgb(30 94 150);
+}
+.btn--primary:hover{
+  background-color: #3d97e7;
+}
+
+.app-sidebar{
+  background-color: var(--primary-color);
+  color: #6fb2ed;
+}
+.app-counter-wrapper>table{
+  width: 100%;
+}
+.app-counter-wrapper>h2{
+  color: var(--primary-color);
+}
+.app-counter-wrapper{
+  background-color: var(--secondary-color);
+}
+
+.app-counter-settings{
+  color: #8eadc9
+}
+
+.app-counter-settings input:focus{
+  border-color: #6fb2ed;
+}
+.app-counter__table{
+ color: var(--primary-color);
+}
+
+tbody tr td:nth-child(1), tbody tr td:nth-child(2){
+  width: 15%;
+  text-align: center;
+}
+
+tbody tr td:last-child{
+  width: 70%;
+}
