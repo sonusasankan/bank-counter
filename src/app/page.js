@@ -1,7 +1,8 @@
 import ClientHome from '../components/ClientHome';
 
 async function getData() {
-  const res = await fetch(`http://localhost:3000/data.json`);
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || ''; // Use environment variable for base URL
+  const res = await fetch(`${baseUrl}/data.json`);
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
