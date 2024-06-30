@@ -1,11 +1,9 @@
 import ClientHome from '../components/ClientHome';
+import { promises as fs } from 'fs';
 
 async function getData() {
-  const res = await fetch(`/data.json`);
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-  return res.json();
+  const res = await fs.readFile(`public/data.json`);
+  return JSON.parse(res);
 }
 
 export default async function Home() {
